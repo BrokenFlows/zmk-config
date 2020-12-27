@@ -23,7 +23,7 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | GAME |
 // |  TAB |CTRLA|ALT S|CMD D|SHFTF|  G  |   |  H  |SHFTJ|CMD K|ALT L|CTRL;|  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
-//                    | NUM |BKSPC| SPC |   | SPC | ENT | MDA |
+//                    | NMB |BKSPC| SPC |   | SPC | ENT | MDA |
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
    &kp TAB   &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F &kp G   &kp H &mt RSHFT J  &mt RCMD K &mt RALT L &mt RCTRL SEMI &kp SQT
@@ -38,23 +38,23 @@
 // | SHFT |     |     |LEFT |DOWN |RIGHT|   |     |     |     |     |     |      |
 //                    | DEF | ENT | SPC |   |     |     |     |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E    &kp R     &none       &none &none  &none &none &none &tog DEFAULT
-   &kp LCTRL &kp A &kp S &kp D    &kp UP    &kp G       &none &none  &none &none &none &none
-   &kp LSHFT &none &none &kp LEFT &kp DOWN  &kp RIGHT   &none &none  &none &none &none &none
+   &kp ESC   &kp Q &kp W &kp E    &kp R     &none       &none &none &none &none &none &tog DEFAULT
+   &kp LCTRL &kp A &kp S &kp D    &kp UP    &kp G       &none &none &none &none &none &none
+   &kp LSHFT &none &none &kp LEFT &kp DOWN  &kp RIGHT   &none &none &none &none &none &none
                        &tog DEFAULT &kp RET &kp SPACE   &none &none &none
                         >;
                 };
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  £  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // |  ENT |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | F12  |
 // | SHFT | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | F11  |
 //                    |     |BKSPC| SPC |   | SPC | ENT |     |
                         bindings = <
-   &kp ESC   &kp !  &kp @  &kp £  &kp $    &kp %    &kp ^  &kp &  &kp *  &kp (  &kp )  &kp BSPC
-   &kp RET   &kp N1 &kp N2 &kp N3 &kp N4   &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp F12
-   &kp LSHFT &kp F1 &kp F2 &kp F3 &kp F4   &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F0 &kp F11
-                         &trans &kp BSPC &kp SPACE   &kp RET &trans &kp RALT
+   &kp ESC   &kp EXCL &kp AT  &kp AMPS &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp RET   &kp N1   &kp N2  &kp N3   &kp N4   &kp N5      &kp N6    &kp N7   &kp N8    &kp N9   &kp N0   &kp F12
+   &kp LSHFT &kp F1   &kp F2  &kp F3   &kp F4   &kp F5      &kp F6    &kp F7   &kp F8    &kp F9   &kp F0   &kp F11
+                                &trans &kp BSPC &kp SPACE   &kp RET &trans &kp RALT
                         >;
                 };
                 media_layer {
@@ -62,11 +62,11 @@
 // |  ESC |BTCLR|BTPRV|BTNXT|     |     |   |  7  |  8  |  9  |  -  |  =  |  \  |
 // | CTRL |MUTE |V DN |V UP | PLY |     |   |  4  |  5  |  6  |  [  |  ]  | "|" |
 // | SHFT |     | RW  | FF  |     |     |   |  1  |  2  |  3  |  {  |  }  |  `  |
-//                    |     |BKSPC| SPC |   |     |  0  |     |
+//                    |     |BKSPC| SPC |   | RET |  0  |     |
                         bindings = <
-   &kp  ESC  &bt BT_CLR &bt BT_PRV   &bt BT_NXT   &none    &none   &kp N7 &kp N8 &kp N9  &kp MINUS &kp EQUAL &kp BSLH
-   &kp LCTRL &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &none   &kp N4 &kp N5 &kp N6  &kp LBKT  &kp RBKT &kp PIPE
-   &kp LSHFT &none      &kp C_PREV   &kp C_NEXT   &none    &none   &kp N1 &kp N2 &kp N3  &kp LBRC  &kp RBRC &kp GRAVE
+   &kp  ESC  &bt BT_CLR &bt BT_PRV   &bt BT_NXT   &none    &none   &kp N7 &kp N8 &kp N9 &kp MINUS &kp EQUAL &kp BSLH
+   &kp LCTRL &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &none   &kp N4 &kp N5 &kp N6 &kp LBKT  &kp RBKT  &kp PIPE
+   &kp LSHFT &none      &kp C_PREV   &kp C_NEXT   &none    &none   &kp N1 &kp N2 &kp N3 &kp LBRC  &kp RBRC  &kp GRAVE
                                  &trans &kp BSPC &kp SPACE   &kp RET &kp N0 &trans
                         >;
                 };
