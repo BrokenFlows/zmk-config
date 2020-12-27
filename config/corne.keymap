@@ -28,7 +28,7 @@
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
    &kp TAB   &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F &kp G   &kp H &mt RSHFT J  &mt RCMD K &mt RALT L &mt RCTRL SEMI &kp SQT
    &kp LSHFT &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                 &mo NUM &kp BSPC &lt SWAP SPACE   &kp SPC &kp RET &mo MEDIA
+                                 &mo NUM &kp BSPC &lt SWAP SPACE   &kp SPACE &kp RET &mo MEDIA
                         >;
                 };
                 game_layer {
@@ -80,7 +80,7 @@
    &kp ESC   &kp P       &kp O      &kp I      &kp U       &kp Y   &kp T &kp R        &kp E      &kp W      &kp Q          &tog ESC
    &kp SQT   &mt RCTRL ; &mt RALT L &mt RCMD K &mt RSHFT J &kp H   &kp G &mt LSHFT F  &mt LCMD D &mt LALT S &mt LCTRL A    &kp TAB
    &kp RSHFT &kp FSLH    &kp DOT    &kp COMMA  &kp M       &kp N   &kp B &kp V        &kp C      &kp X      &kp Z          &kp LSHFT
-                                            &none &kp RET &trans   &kp SPC &kp BSPC &none
+                                            &none &kp RET &trans   &kp SAPCE &kp BSPC &none
                         >;
                 };
         };
