@@ -80,7 +80,7 @@
    &kp ESC   &kp P          &kp O      &kp I      &kp U       &kp Y   &kp T &kp R        &kp E      &kp W      &kp Q          &tog ESC
    &kp SQT   &mt RCTRL SEMI &mt RALT L &mt RCMD K &mt RSHFT J &kp H   &kp G &mt LSHFT F  &mt LCMD D &mt LALT S &mt LCTRL A    &kp TAB
    &kp RSHFT &kp FSLH       &kp DOT    &kp COMMA  &kp M       &kp N   &kp B &kp V        &kp C      &kp X      &kp Z          &kp LSHFT
-                                            &none &kp RET &trans   &kp SAPCE &kp BSPC &none
+                                            &none &kp RET &trans   &kp SPACE &kp BSPC &none
                         >;
                 };
         };
