@@ -9,10 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define GAME    1
-#define NUM     2
-#define MEDIA   3
-#define SWAP    4
+#define ARW     1
+#define GAME    2
+#define NUM     3
+#define MEDIA   4
+#define SWAP    5
 
 / {
     behaviors {
@@ -31,28 +32,41 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | GAME |
-// |  TAB |CTRLA|ALT S|CMD D|SHFTF|  G  |   |  H  |SHFTJ|CMD K|ALT L|CTRL;|  '   |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | GAME |
+// |  ESC |CTRLA|ALT S|CMD D|SHFTF|  G  |   |  H  |SHFTJ|CMD K|ALT L|CTRL;|  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
-//                    | NMB |BKSPC| SPC |   | SPC | ENT | MDA |
+//                    | NMB |BKSPC| SPC |   | ENT | SPC | MDA |
                         bindings = <
-   &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
-   &kp TAB   &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G   &kp H &hm RSHFT J  &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
+   &kp TAB   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
+   &kp ESC   &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G   &kp H &hm RSHFT J  &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
    &kp LSHFT &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                 &mo NUM &kp BSPC &lt SWAP SPACE   &kp SPACE &kp RET &mo MEDIA
+                                 &mo NUM &kp BSPC &lt SWAP SPACE   &lt ARW RET &kp SPACE &mo MEDIA
+                        >;
+                };
+                arrow_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |  U  |     |     |      |
+// |      |     |     |     |     |     |   |     |  L  |  D  |  R  |     |      |
+// |      |     |     |     |     |     |   |     |  L  |  D  |  U  |  R  |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans   &trans &trans   &kp UP   &trans    &trans    &trans &trans
+   &trans &trans &trans &trans &trans   &trans &kp LEFT &kp DOWN &kp RIGHT &trans    &trans &trans
+   &trans &trans &trans &trans &trans   &trans &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans &trans
+           &tog DEFAULT &trans &trans   &none &none &none
                         >;
                 };
                 game_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |     |   |     |     |     |     |     | DEF  |
-// | CTRL |  A  |  S  |  D  | UP  |  G  |   |     |     |     |     |     |      |
+// |  TAB |  Q  |  W  |  E  |  R  |     |   |     |     |     |     |     | DEF  |
+// | ESC  |  A  |  S  |  D  | UP  |  G  |   |     |     |     |     |     |      |
 // | SHFT |     |     |LEFT |DOWN |RIGHT|   |     |     |     |     |     |      |
-//                    | DEF | ENT | SPC |   |     |     |     |
+//                    | DEF | SPC | ENT |   |     |     |     |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E    &kp R     &none       &none &none &none &none &none &tog DEFAULT
-   &kp LCTRL &kp A &kp S &kp D    &kp UP    &kp G       &none &none &none &none &none &none
-   &kp LSHFT &none &none &kp LEFT &kp DOWN  &kp RIGHT   &none &none &none &none &none &none
-                       &tog DEFAULT &kp RET &kp SPACE   &none &none &none
+   &kp TAB       &kp Q &kp W &kp E &kp R  &none   &none &none &none &none &none &tog GAME
+   &mt LCTRL ESC &kp A &kp S &kp D &none  &none   &none &none &none &none &none &none
+   &kp LSHFT     &none &none &none &none  &none   &none &none &none &none &none &none
+                    &tog GAME &kp SPACE &kp RET   &none &none &none
                         >;
                 };
                 num_layer {
