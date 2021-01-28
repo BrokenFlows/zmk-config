@@ -25,6 +25,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        mod_gresc: mod_gresc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_GRESC";
+            #binding-cells = <2>;
+            tapping_term_ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&gresc>;
+        };
     };
 
     keymap {
@@ -37,10 +46,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
 //                    | NMB |BKSPC| SPC |   | ENT | SPC | MDA |
                         bindings = <
-   &kp TAB       &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
-   &mt LCTRL ESC &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G   &kp H &hm RSHFT J  &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
-   &kp LSHFT     &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                     &mo NUM &kp BSPC &lt SWAP SPACE   &lt ARW RET &kp SPACE &mo MEDIA
+   &kp TAB            &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
+   &mod_gresc LCTRL 0 &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G   &kp H &hm RSHFT J  &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
+   &kp LSHFT          &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
+                                   &mo MEDIA &kp BSPC &lt SWAP SPACE   &lt ARW RET &kp SPACE &mo NUM
                         >;
                 };
                 arrow_layer {
