@@ -36,6 +36,14 @@
         };
     };
 
+	combos {
+		compatible = "zmk,combos";
+		combo_quote {
+			timeout-ms = <50>;
+			key-positions = <22 23>;
+			bindings = <&kp SQT>;
+		};
+	};
     keymap {
                 compatible = "zmk,keymap";
 
@@ -49,7 +57,7 @@
    &kp TAB            &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &tog GAME
    &mod_gresc LCTRL 0 &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G   &kp H &hm RSHFT J  &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
    &kp LSHFT          &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                   &mo MEDIA &kp BSPC &lt SWAP SPACE   &lt ARW RET &kp SPACE &mo NUM
+                                      &lt MEDIA DEL &kp BSPC &lt SWAP DEL   &lt ARW RET &kp SPACE &lt NUM TAB
                         >;
                 };
                 arrow_layer {
